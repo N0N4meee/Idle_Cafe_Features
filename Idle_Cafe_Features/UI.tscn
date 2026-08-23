@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://cxt00ye2t0opp"]
+
+[ext_resource type="Script" uid="uid://cf1wgh78mivih" path="res://scripts/MainUI.gd" id="1_mainui"]
+
+[node name="UI" type="Control" unique_id=883747264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mainui")
+
+[node name="VBoxMain" type="VBoxContainer" parent="." unique_id=2066533590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TopHeader" type="HBoxContainer" parent="VBoxMain" unique_id=1148048831]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="VBoxMain/TopHeader" unique_id=1033110763]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Uang: $100.0"
+
+[node name="CapacityLabel" type="Label" parent="VBoxMain/TopHeader" unique_id=1162124558]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Kapasitas Meja: 0/2"
+horizontal_alignment = 2
+
+[node name="ContentArea" type="HBoxContainer" parent="VBoxMain" unique_id=27494196]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="LeftPanel" type="VBoxContainer" parent="VBoxMain/ContentArea" unique_id=2026046854]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="MenuHeader" type="Label" parent="VBoxMain/ContentArea/LeftPanel" unique_id=1998422806]
+layout_mode = 2
+text = "--- MANAJEMEN MENU & STAF ---"
+
+[node name="MenuButton1" type="Button" parent="VBoxMain/ContentArea/LeftPanel" unique_id=1794284116]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Buka Kopi ($10)"
+
+[node name="MenuButton2" type="Button" parent="VBoxMain/ContentArea/LeftPanel" unique_id=1951222109]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Buka Kue ($25)"
+
+[node name="StaffButton1" type="Button" parent="VBoxMain/ContentArea/LeftPanel" unique_id=27755449]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Sewa Barista ($50)"
+
+[node name="RightPanel" type="VBoxContainer" parent="VBoxMain/ContentArea" unique_id=16876464]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="ActionHeader" type="Label" parent="VBoxMain/ContentArea/RightPanel" unique_id=419272124]
+layout_mode = 2
+text = "--- AKSI CAFE ---"
+
+[node name="BuyFurnitureBtn" type="Button" parent="VBoxMain/ContentArea/RightPanel" unique_id=1523911253]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Beli Kursi/Meja Baru ($150)"
+
+[node name="ServeCustomerBtn" type="Button" parent="VBoxMain/ContentArea/RightPanel" unique_id=1967809663]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+text = "Melayani Pelanggan (Manual)"
+
+[node name="LogPanel" type="Panel" parent="VBoxMain" unique_id=1664325855]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="LogLabel" type="Label" parent="VBoxMain/LogPanel" unique_id=2132673701]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "> Selamat datang di Rat's Muse Cafe!"
+autowrap_mode = 2
+
+[node name="CustomerTimer" type="Timer" parent="." unique_id=1311488770]
+unique_name_in_owner = true
+autostart = true
